@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@layer components {
+  @import 'tailwindcss/base';
+  @import 'tailwindcss/components';
+  @import 'tailwindcss/utilities';
+}
+
+body {
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+

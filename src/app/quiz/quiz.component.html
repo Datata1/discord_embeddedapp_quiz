@@ -1,0 +1,25 @@
+<!-- Start the Question -->
+
+
+<div class=" flex flex-row justify-center pt-16 pb-2 m-8">
+    <button class="bg-gray-500 text-white font-bold py-2 px-4 h-fit self-center" (click)="toBrowser()"> <- back</button>
+    <h1 class="text-5xl font-bold p-8 self-center">{{ quiz?.title }}</h1>
+    <img class="rounded-full w-40 h-40" src="{{ quiz?.quizPicture}}" alt="{{quiz?.title}}">
+</div>
+<p class="text-2xl">{{ quiz?.description }}</p>
+
+<div class="flex flex-row justify-center items-center">
+    <div *ngFor="let question of quiz?.questions">
+        <div>
+            <div class="rounded-lg overflow-hidden relative m-8 w-52 h-80">
+                <img *ngIf="question.picture" class="w-fit h-32" src="{{ question.picture }}" alt="{{ question.question }}">
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">{{ question.question }}</h3>
+                </div>
+                <button (click)="doSelect(question)" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Start Question</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
